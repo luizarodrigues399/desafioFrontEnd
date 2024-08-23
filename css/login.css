@@ -1,0 +1,103 @@
+.login-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    width: 35%;
+    background-color: var(--secondary-color);
+    height: 100%;
+    border-right: var(--login-border) 2px solid;
+
+    /* para versões antigas de browser firefox, chrome, safari */
+    -webkit-box-shadow:  var(--box-shadow);
+    -moz-box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);
+    color: var(--login-text);
+}
+
+.login-container .logo{
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+    flex-grow: 1;
+}
+
+.login-box{
+    width: 70%;
+    flex-grow: 2;
+}
+
+.login-box p{
+    font-weight: 500;
+}
+
+.login-box p, .login-box input, .login-box button{
+    margin: 1.5rem 0;
+}
+
+.login-box button{
+    padding: 10px;
+    border-radius: 25px;
+    width: 100%;
+    border: solid 2px var(--primary-color);
+    font-weight: bold;
+    color: var(--login-text);
+    transition: .4s ease-in-out;
+}
+
+.login-box .validElement{
+    border-bottom: 1px solid var(--valid-element);
+}
+
+.login-image{
+    display: none;
+    position: absolute;
+    bottom: 40px;
+    right: 0px;
+}
+
+.login-box button:hover{
+    color: white;
+    background-color: var(--primary-color);
+    font-size: 16.5px;
+    cursor: pointer;
+}
+
+
+.login-box input{
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid var(--login-text);
+    outline: none; /* remover a "borda" que fica em volta do elemento quando clica nele */
+    background: transparent;
+}
+
+.login-input{
+    position: relative;
+}
+
+.login-box label {
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    transition: .5s;
+}
+
+
+ /* seleciona os labels que estão logo abaixo do input que está sendo clicado/focado */
+.login-box input:focus ~ label,
+.login-box input:valid ~ label {  
+    top: 10px;
+    left: 0;
+    font-size: small;
+}
+
+.login-box .login-error{
+    border-bottom: 1px solid red;
+}
+
+.error-message{
+    display: none;
+    color: red;
+}

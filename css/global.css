@@ -1,0 +1,28 @@
+/* reseto todas as margins e paddings do elemento para definir as minhas próprias se necessário */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* definição de todas as cores a serem usadas no sistema, se forem cores hexadecimal */
+:root {
+    --primary-color: #00B5D3; 
+    --secondary-color: #F2F2F2;
+    --login-border: #0093AC;
+    --login-text: #707070;
+    --valid-element: #3BA85A;
+    --background-layout: #E8E8E8;
+    --border-layout: #D6D6D6;
+    --input-color: #9F9F9F;
+
+    /* Sem deslocamento horizontal e vertical da sombra, mas com 10px de desfoque da sombra. Sombra de cor preta com opacidade */
+    --box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+html, body{
+    height: 100vh;
+    font-size: 16px;
+    background-color: var(--primary-color);
+    font-family: "Roboto", Arial, Helvetica;
+}
