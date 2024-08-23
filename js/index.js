@@ -31,7 +31,9 @@ function loginSubmit(){
 
                 console.log(formData)
             },
+
             success: responseSuccessSubmitForm,
+
             error: function(response) {
                 // Manipula erros
                 responseErrorSubmitForm();
@@ -51,9 +53,11 @@ function resetMessages(){
 
 function responseSuccessSubmitForm(response){
 
-     // Manipula a resposta do servidor
+     // Manipula a resposta do servidor e chama a função que irá mudar o layout da pagina
      if (response.status == "200"){
+
         $(".welcome-message").show();
+
         $(".error-message").hide();
 
         localStorage.setItem("token", response.token);
@@ -74,12 +78,6 @@ function responseErrorSubmitForm(){
 }
 
 
-function displayLoading(){
-    $("#submit-form").hide();
-
-
-}
-
 function checkInput(input, doneImage){
 
     let element = $(input);
@@ -90,8 +88,7 @@ function checkInput(input, doneImage){
     mostro o simbolo de check e adiciono a classe que faz com que o traço abaixo do input seja verde*/ 
 
      if (element.val() && !element.hasClass('validElement')){
-
-        console.log(doneImage)
+        
         $(doneImage).show();  // mostra o simbolo de check no input
 
         element.addClass('validElement'); //adiciona a classe no elemento

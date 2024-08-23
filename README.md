@@ -15,6 +15,7 @@ Para baixar a imagem, vá no terminal e digite
 No lugar de "~/my_web_pages", colocar o caminho absoluto de onde está a pasta com os arquivos, pois assim o docker irá mapear
 essa pasta para a pasta do container. Exemplo no meu caso:
 C:\Users\luiza\OneDrive\Desktop\desafioFrontEnd
+
 Após, digite no browser http://localhost:41062/, que é aonde a aplicação irá rodar.
 
 Não é necessário configurar mais nada.

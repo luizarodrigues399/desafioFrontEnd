@@ -1,3 +1,4 @@
+/* é o responsavel por retrair o box de logine transformar em um sidebar */
 .login-container-retreat{
     width: 5%;
     border-right: none;
@@ -29,6 +30,7 @@
     animation-timing-function: ease;
 }
 
+/* abaixo cada uma das transições das imagens que ficarão no sidebar */
 .show-icons img:nth-child(1){
     animation: icons-transition .4s;
 }

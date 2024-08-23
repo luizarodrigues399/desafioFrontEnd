@@ -1,4 +1,7 @@
+
+/* modifica todo o layout uma vez que é feito o login, para ir para a tela de sistema */
 function retreatLoginContainer(){
+
     $(".login-container").addClass('login-container-retreat');
 
     $("body").addClass('body-transition');
@@ -16,6 +19,7 @@ function retreatLoginContainer(){
     listTransactions();
 }
 
+/* carrega dados do usuario logado */
 function loadUserData(){
 
     let url = 'https://southti.com.br/desafio-front-end/user/profile';
@@ -40,6 +44,8 @@ function loadUserData(){
     
 }
 
+
+/*adiciona um novo elemento na transação */
 function transactionSubmit(){
     $('#layout-submit-form').on('submit', function(event) {
         event.preventDefault(); // Previne o envio padrão do formulário
@@ -79,7 +85,7 @@ function transactionSubmit(){
     });
 }
 
-
+/* lista todas as transações correntes */
 function listTransactions(){
     let headers = {
         "Authorization": localStorage.getItem('token')
@@ -93,11 +99,6 @@ function listTransactions(){
         headers: headers,
         contentType: "application/json",
         success: function(response){
-
-                response.map((item)=>{
-                    parseFloat(item)
-                });
-
                 let template = $.templates("#resume-template").render(response);
 
                 $(".layout-resume-body").html(template);
